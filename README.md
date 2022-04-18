@@ -1,38 +1,72 @@
-# hayishu_cloud
+# hayishu-cloud
 
-#### 介绍
-基于SpringCloud的校园二手书交易系统
+基于SpringCloud2.3的校园二手书交易系统，整合了nacos、feign、springcloud-gateway服务，实现Docker部署和云部署。
 
-#### 软件架构
+前端项目：![hayishu-vue2](https://github.com/zhangjunhui6/hayishu-vue2)
+
+## 软件架构
+
 ![软件架构](/static/image/微服务架构.png)
 
+## 系统功能
+
+![系统功能](/static/image/系统功能.png)
+
+## 目录结构
+
+```bash
+hayishu-cloud
+├─book-service    # 书本微服务
+│  └─src          # springboot代码目录
+│      └─main
+│          ├─java
+│          │  └─org
+│          │      └─example
+│          │          └─book
+│          │              ├─config      # 存放配置信息
+│          │              ├─controller  # 前端控制器
+│          │              ├─mapper      # 数据接口层
+│          │              ├─pojo        # 存放实体类
+│          │              └─service     # 数据服务层
+│          └─resources
+├─cart-service    # 购物车微服务
+├─club-service    # 书友微服务
+├─data  
+│  └─mysql        # MySQL数据库
+├─docker-compose  
+├─feign-api       # 微服务间调用的公共接口
+├─gateway         # 网关微服务
+├─order-service   # 订单微服务
+├─static          
+└─user-service    # 用户微服务
+```
+
+## Docker部署
+1. 容器信息
+   
+    | 容器名 | 功能 | 端口 | 基础镜像 |
+    | :----: | :----: | :----: | :----: |
+    | mysql | 数据库 | 3306 | mysql:5.7.25 |
+    | nginx | 反向代理服务器 | 80 | nginx:latese |
+    | nacos | 服务注册与发现 | 8848 | nacos/nacos-server:latest |
+    | gateway | 网关服务 | 10086 | java:8-alpine |
+    | user-service | 用户服务 | 8081 | java:8-alpine |
+    | club-service | 书友服务 | 8082 | java:8-alpine |
+    | book-service | 图书服务 | 8083 | java:8-alpine |
+    | cart-service | 购物车服务 | 8085 | java:8-alpine |
+    | order-service | 订单服务 | 8086 | java:8-alpine |
 
 
-#### 安装教程
+2. 部署图
+   
+   ![Docker部署](/static/image/Docker部署.png)
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+## 运行演示
 
-#### 使用说明
+1. 登录页面
+   
+   ![login](/static/image/demo/login.png)
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+2. 首页
+   
+   ![index](/static/image/demo/index.jpg)
