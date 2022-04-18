@@ -1,6 +1,8 @@
 # hayishu-cloud
 
-基于SpringCloud2.3的校园二手书交易系统，整合了nacos、feign、springcloud-gateway服务，实现Docker部署和云部署。
+基于SpringCloud2.3的校园二手书交易系统，整合了nacos、feign、springcloud-gateway服务，并实现Docker部署与云部署。
+
+每个微服务是基于SpringBoot+Mybatis的单体应用，并用到了支付宝沙箱支付、minio文件服务器等技术。
 
 前端项目：![hayishu-vue2](https://github.com/zhangjunhui6/hayishu-vue2)
 
