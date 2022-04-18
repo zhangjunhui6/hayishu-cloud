@@ -1,0 +1,60 @@
+server:
+  port: 8081
+spring:
+  profiles: dev
+  datasource:
+    url: jdbc:mysql://47.93.245.14:3306/hayishu_user?useSSL=false&characterEncoding=utf8
+    username: zjh
+    password: zjh19990412
+    driver-class-name: com.mysql.jdbc.Driver
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.93.245.14:8848
+  application:
+    name: userservice
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+logging:
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS
+feign:
+  httpclient:
+    enabled: true
+    max-connections: 200
+    max-connections-per-route: 50
+---
+server:
+  port: 8081
+spring:
+  profiles: pro
+  datasource:
+    url: jdbc:mysql://82.157.149.211:3306/hayishu_user?useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 82.157.149.211:8848
+        ip: 82.157.164.144
+        port: 8081
+  application:
+    name: userservice
+mybatis:
+  type-aliases-package: org.example.user.pojo
+  configuration:
+    map-underscore-to-camel-case: true
+logging:
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS
+feign:
+  httpclient:
+    enabled: true
+    max-connections: 200
+    max-connections-per-route: 50
+---
+spring:
+  profiles:
+    active: dev

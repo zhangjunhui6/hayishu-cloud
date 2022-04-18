@@ -1,0 +1,68 @@
+server:
+  port: 8083
+spring:
+  profiles: dev
+  application:
+    name: bookservice
+  datasource:
+    url: jdbc:mysql://47.93.245.14:3306/hayishu_book?useSSL=false&characterEncoding=utf8
+    username: zjh
+    password: zjh19990412
+    driver-class-name: com.mysql.jdbc.Driver
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.93.245.14:8848
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+logging:
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS
+feign:
+  httpclient:
+    enabled: true
+    max-connections: 200
+    max-connections-per-route: 50
+minio:
+  endPoint: http://47.93.245.14:9000/
+  accessKey: minio
+  secretKey: minio123
+  bucketName: hayishu
+---
+server:
+  port: 8083
+spring:
+  profiles: pro
+  application:
+    name: bookservice
+  datasource:
+    url: jdbc:mysql://mysql:3306/hayishu_book?useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+  cloud:
+    nacos:
+      discovery:
+        server-addr: nacos:8848
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+logging:
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS
+feign:
+  httpclient:
+    enabled: true
+    max-connections: 200
+    max-connections-per-route: 50
+
+minio:
+  endPoint: http://47.93.245.14:9000/
+  accessKey: minio
+  secretKey: minio123
+  bucketName: hayishu
+---
+spring:
+  profiles:
+    active: dev

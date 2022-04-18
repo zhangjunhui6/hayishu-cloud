@@ -1,0 +1,122 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="1">
+            <item index="0" class="java.lang.String" itemvalue="@tap @tap.stop @tap.prevent @tap.once @click @click.stop @click.prevent @click.once @change @change.lazy @change.number @change.trim @on @blur @fous @submit scoped v-model v-model.number v-model.trim v-for v-text v-html v-show v-if v-else-if v-else v-pre v-bind v-bind:class v-bind:style v-bind:id v-bind:href" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="34">
+            <item index="0" class="java.lang.String" itemvalue="nobr" />
+            <item index="1" class="java.lang.String" itemvalue="noembed" />
+            <item index="2" class="java.lang.String" itemvalue="comment" />
+            <item index="3" class="java.lang.String" itemvalue="noscript" />
+            <item index="4" class="java.lang.String" itemvalue="embed" />
+            <item index="5" class="java.lang.String" itemvalue="script" />
+            <item index="6" class="java.lang.String" itemvalue="el-table-column" />
+            <item index="7" class="java.lang.String" itemvalue="el-table" />
+            <item index="8" class="java.lang.String" itemvalue="el-popover" />
+            <item index="9" class="java.lang.String" itemvalue="el-tag" />
+            <item index="10" class="java.lang.String" itemvalue="el-row" />
+            <item index="11" class="java.lang.String" itemvalue="el-form" />
+            <item index="12" class="java.lang.String" itemvalue="el-form-item" />
+            <item index="13" class="java.lang.String" itemvalue="el-input" />
+            <item index="14" class="java.lang.String" itemvalue="el-button" />
+            <item index="15" class="java.lang.String" itemvalue="el-container" />
+            <item index="16" class="java.lang.String" itemvalue="el-breadcrumb" />
+            <item index="17" class="java.lang.String" itemvalue="el-header" />
+            <item index="18" class="java.lang.String" itemvalue="el-breadcrumb-item" />
+            <item index="19" class="java.lang.String" itemvalue="el-footer" />
+            <item index="20" class="java.lang.String" itemvalue="el-pagination" />
+            <item index="21" class="java.lang.String" itemvalue="el-col" />
+            <item index="22" class="java.lang.String" itemvalue="el-menu" />
+            <item index="23" class="java.lang.String" itemvalue="el-menu-item" />
+            <item index="24" class="java.lang.String" itemvalue="el-submenu" />
+            <item index="25" class="java.lang.String" itemvalue="el-card" />
+            <item index="26" class="java.lang.String" itemvalue="el-tabs" />
+            <item index="27" class="java.lang.String" itemvalue="el-tab-pane" />
+            <item index="28" class="java.lang.String" itemvalue="el-dialog" />
+            <item index="29" class="java.lang.String" itemvalue="el-aside" />
+            <item index="30" class="java.lang.String" itemvalue="el-tooltip" />
+            <item index="31" class="java.lang.String" itemvalue="el-select" />
+            <item index="32" class="java.lang.String" itemvalue="el-option" />
+            <item index="33" class="java.lang.String" itemvalue="el-upload" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="HttpUrlsUsage" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredUrls">
+        <list>
+          <option value="http://localhost" />
+          <option value="http://127.0.0.1" />
+          <option value="http://0.0.0.0" />
+          <option value="http://www.w3.org/" />
+          <option value="http://json-schema.org/draft" />
+          <option value="http://java.sun.com/" />
+          <option value="http://xmlns.jcp.org/" />
+          <option value="http://javafx.com/javafx/" />
+          <option value="http://javafx.com/fxml" />
+          <option value="http://maven.apache.org/xsd/" />
+          <option value="http://maven.apache.org/POM/" />
+          <option value="http://www.springframework.org/schema/" />
+          <option value="http://www.springframework.org/tags" />
+          <option value="http://www.springframework.org/security/tags" />
+          <option value="http://www.thymeleaf.org" />
+          <option value="http://www.jboss.org/j2ee/schema/" />
+          <option value="http://www.jboss.com/xml/ns/" />
+          <option value="http://www.ibm.com/webservices/xsd" />
+          <option value="http://activemq.apache.org/schema/" />
+          <option value="http://schema.cloudfoundry.org/spring/" />
+          <option value="http://schemas.xmlsoap.org/" />
+          <option value="http://cxf.apache.org/schemas/" />
+          <option value="http://primefaces.org/ui" />
+          <option value="http://tiles.apache.org/" />
+          <option value="http://cyberia.fun" />
+          <option value="http://cyber.fun" />
+          <option value="http://82.157.149.211" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="JavaDoc" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="TOP_LEVEL_CLASS_OPTIONS">
+        <value>
+          <option name="ACCESS_JAVADOC_REQUIRED_FOR" value="none" />
+          <option name="REQUIRED_TAGS" value="" />
+        </value>
+      </option>
+      <option name="INNER_CLASS_OPTIONS">
+        <value>
+          <option name="ACCESS_JAVADOC_REQUIRED_FOR" value="none" />
+          <option name="REQUIRED_TAGS" value="" />
+        </value>
+      </option>
+      <option name="METHOD_OPTIONS">
+        <value>
+          <option name="ACCESS_JAVADOC_REQUIRED_FOR" value="none" />
+          <option name="REQUIRED_TAGS" value="@return@param@throws or @exception" />
+        </value>
+      </option>
+      <option name="FIELD_OPTIONS">
+        <value>
+          <option name="ACCESS_JAVADOC_REQUIRED_FOR" value="none" />
+          <option name="REQUIRED_TAGS" value="" />
+        </value>
+      </option>
+      <option name="IGNORE_DEPRECATED" value="false" />
+      <option name="IGNORE_JAVADOC_PERIOD" value="true" />
+      <option name="IGNORE_DUPLICATED_THROWS" value="false" />
+      <option name="IGNORE_POINT_TO_ITSELF" value="false" />
+      <option name="myAdditionalJavadocTags" value="date" />
+    </inspection_tool>
+  </profile>
+</component>

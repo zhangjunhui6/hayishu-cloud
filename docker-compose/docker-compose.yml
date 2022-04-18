@@ -1,0 +1,58 @@
+version: "3.2"
+
+services:
+  nacos:
+    image: nacos/nacos-server
+    environment:
+      MODE: standalone
+    ports:
+      - "8848:8848"
+      - "9848:9848"
+  mysql:
+    image: mysql:5.7.25
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+    ports:
+      - "3306:3306"
+      - "33060:33060"
+    volumes:
+      - "/home/ubuntu/hayishu_deploy/mysql/data:/var/lib/mysql"
+      - "/home/ubuntu/hayishu_deploy/mysql/conf:/etc/mysql/conf.d/"
+  user-service:
+    build: ./user-service
+    depends_on:
+      - mysql
+      - nacos
+  club-service:
+    build: ./club-service
+    depends_on:
+      - mysql
+      - nacos
+  book-service:
+    build: ./book-service
+    depends_on:
+      - mysql
+      - nacos
+  cart-service:
+    build: ./cart-service
+    depends_on:
+      - mysql
+      - nacos
+  order-service:
+    build: ./order-service
+    depends_on:
+      - mysql
+      - nacos
+  gateway:
+    build: ./gateway
+    ports:
+      - "10086:10086"
+    depends_on:
+      - nacos
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - "/home/ubuntu/hayishu_deploy/nginx/dist:/usr/share/nginx/dist"
+      - "/home/ubuntu/hayishu_deploy/nginx/nginx.conf:/etc/nginx/nginx.conf"

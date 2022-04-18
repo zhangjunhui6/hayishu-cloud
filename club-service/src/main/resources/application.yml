@@ -1,0 +1,53 @@
+server:
+  port: 8082
+spring:
+  profiles: dev
+  datasource:
+    url: jdbc:mysql://47.93.245.14:3306/hayishu_club?useSSL=false&characterEncoding=utf8
+    username: zjh
+    password: zjh19990412
+    driver-class-name: com.mysql.jdbc.Driver
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.93.245.14:8848
+        username: nacos
+        password: nacos
+  application:
+    name: clubservice
+mybatis:
+  type-aliases-package: org.example.club.pojo
+  configuration:
+    map-underscore-to-camel-case: true
+logging:
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS
+---
+server:
+  port: 8082
+spring:
+  profiles: pro
+  datasource:
+    url: jdbc:mysql://mysql:3306/hayishu_club?useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+  cloud:
+    nacos:
+      discovery:
+        server-addr: nacos:8848
+        username: nacos
+        password: nacos
+  application:
+    name: clubservice
+mybatis:
+  type-aliases-package: org.example.club.pojo
+  configuration:
+    map-underscore-to-camel-case: true
+logging:
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS
+---
+spring:
+  profiles:
+    active: dev

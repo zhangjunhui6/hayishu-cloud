@@ -1,0 +1,89 @@
+server:
+  port: 10086 # 网关端口
+spring:
+  profiles: dev
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.93.245.14:8848
+    gateway:
+      globalcors: # 全局跨域处理(无效)
+        add-to-simple-url-handler-mapping: true
+        cors-configurations:
+          '[/**]':
+            allowCredentials: true
+            allowedOriginPatterns: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+      routes: # 网关路由配置
+        - id: user-service
+          uri: lb://userservice
+          predicates:
+            - Path=/api/user/**
+        - id: club-service
+          uri: lb://clubservice
+          predicates:
+            - Path=/api/club/**
+        - id: book-service
+          uri: lb://bookservice
+          predicates:
+            - Path=/api/book/**
+        - id: cart-service
+          uri: lb://cartservice
+          predicates:
+            - Path=/api/cart/**
+        - id: order-service
+          uri: lb://orderservice
+          predicates:
+            - Path=/api/order/**
+      default-filters:
+        - StripPrefix=1
+---
+server:
+  port: 10086 # 网关端口
+spring:
+  profiles: pro
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: nacos:8848
+    gateway:
+      globalcors: # 全局跨域处理(无效)
+        add-to-simple-url-handler-mapping: true
+        cors-configurations:
+          '[/**]':
+            allowCredentials: true
+            allowedOriginPatterns: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+      routes: # 网关路由配置
+        - id: user-service
+          uri: lb://userservice
+          predicates:
+            - Path=/api/user/**
+        - id: club-service
+          uri: lb://clubservice
+          predicates:
+            - Path=/api/club/**
+        - id: book-service
+          uri: lb://bookservice
+          predicates:
+            - Path=/api/book/**
+        - id: cart-service
+          uri: lb://cartservice
+          predicates:
+            - Path=/api/cart/**
+        - id: order-service
+          uri: lb://orderservice
+          predicates:
+            - Path=/api/order/**
+      default-filters:
+        - StripPrefix=1
+---
+spring:
+  profiles:
+    active: dev
