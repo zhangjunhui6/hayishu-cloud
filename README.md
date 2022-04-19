@@ -4,7 +4,7 @@
 
 每个微服务是基于SpringBoot+Mybatis的单体应用，并用到了支付宝沙箱支付、minio文件服务器等技术。
 
-前端项目：![hayishu-vue2](https://github.com/zhangjunhui6/hayishu-vue2)
+前端项目：[hayishu-vue2](https://github.com/zhangjunhui6/hayishu-vue2)
 
 ## 软件架构
 
